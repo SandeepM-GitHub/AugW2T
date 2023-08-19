@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library System-Contest-2-August</title>
+    <link
+      rel="icon"
+      href="data:image/jpeg;base64,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"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <nav id="navBar">
+      <h1>Library System</h1>
+      <a href="#home">Home</a>
+      <a href="#books">Books</a>
+      <a href="#register">Register</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+
+    <section id="books" style="padding-top: 10%">
+      <h1 class="books">BOOKS</h1>
+      <table id="table-1">
+        <tr id="row-1">
+          <thead>
+            <th id="col-1">Book ID</th>
+            <th id="col-2">Title</th>
+            <th id="col-3">Author</th>
+            <th id="col-4">Genre</th>
+            <th id="col-5">Availability</th>
+          </thead>
+        </tr>
+
+        <tbody>
+          <tr id="row-2">
+            <td id="col-1">1</td>
+            <td id="col-2">
+              <table id="table-2">
+                <strong>The Enigmatic Quest</strong>
+                <tr>
+                  <td>Publication Date:</td>
+                  <td>2022-04-15</td>
+                </tr>
+                <tr>
+                  <td>Page Count:</td>
+                  <td>320</td>
+                </tr>
+                <tr>
+                  <td>ISBN:</td>
+                  <td>978-9876543210</td>
+                </tr>
+              </table>
+            </td>
+            <td id="col-3">Jessica Miller</td>
+            <td id="col-4">Mystery</td>
+            <td id="col-5">Available</td>
+          </tr>
+
+          <tr id="row-3">
+            <td>2</td>
+            <td id="col-2">
+              <table id="table-2">
+                <strong>Beyond the Stars</strong>
+                <tr>
+                  <td>Publication Date:</td>
+                  <td>2021-08-29</td>
+                </tr>
+                <tr>
+                  <td>Page Count:</td>
+                  <td>420</td>
+                </tr>
+                <tr>
+                  <td>ISBN:</td>
+                  <td>978-1234567890</td>
+                </tr>
+              </table>
+            </td>
+            <td id="col-3">David Thompson</td>
+            <td id="col-4">Science Fiction</td>
+            <td id="col-5">Not Available</td>
+          </tr>
+
+          <tr id="row-4">
+            <td>3</td>
+            <td id="col-2">
+              <table id="table-2">
+                <strong>Shadows of Destiny</strong>
+                <tr>
+                  <td>Publication Date:</td>
+                  <td>2020-11-03</td>
+                </tr>
+                <tr>
+                  <td>Page Count:</td>
+                  <td>280</td>
+                </tr>
+                <tr>
+                  <td>ISBN:</td>
+                  <td>978-5678901234</td>
+                </tr>
+              </table>
+            </td>
+            <td id="col-3">Emily Johnson</td>
+            <td id="col-4">Fantasy</td>
+            <td id="col-5">Available</td>
+          </tr>
+
+          <tr id="row-5">
+            <td>4</td>
+            <td id="col-2">
+              <table id="table-2">
+                <strong> Serendipity's SecretBook-4</strong>
+                <tr>
+                  <td>Publication Date:</td>
+                  <td>2023-01-10</td>
+                </tr>
+                <tr>
+                  <td>Page Count:</td>
+                  <td>380</td>
+                </tr>
+                <tr>
+                  <td>ISBN:</td>
+                  <td>978-0123456789</td>
+                </tr>
+              </table>
+            </td>
+            <td id="col-3">Christopher White</td>
+            <td id="col-4">Romance</td>
+            <td id="col-5">Not Available</td>
+          </tr>
+
+          <tr id="row-6">
+            <td>5</td>
+            <td id="col-2">
+              <table id="table-2">
+                <strong>Code of Deception</strong>
+                <tr>
+                  <td>Publication Date:</td>
+                  <td>2022-06-18</td>
+                </tr>
+                <tr>
+                  <td>Page Count:</td>
+                  <td>460</td>
+                </tr>
+                <tr>
+                  <td>ISBN:</td>
+                  <td>978-5432109876</td>
+                </tr>
+              </table>
+            </td>
+            <td id="col-3">Lauren Smith</td>
+            <td id="col-4">Thriller</td>
+            <td id="col-5">Available</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="register" style="padding-top: 10%">
+      <h1>REGISTER</h1>
+      <form method="post">
+        <label for="First_Name">First Name: </label>
+        <br />
+        <input id="First_Name" type="text" placeholder="ex: Sengal" required />
+        <br />
+        <br />
+
+        <label for="Last_Name">Last Name: </label>
+        <br />
+        <input id="Last_Name" type="text" placeholder="ex: Gupta" required />
+        <br />
+        <br />
+
+        <label for="email">Email: </label>
+        <br />
+        <input
+          id="email"
+          type="email"
+          placeholder="someone@example.com"
+          required
+        />
+        <br />
+        <br />
+
+        <label for="dob">Date of Birth: </label>
+        <br />
+        <input id="dob" type="date" required />
+        <br />
+        <br />
+
+        <label for="age">Age: </label>
+        <br />
+        <input
+          id="age"
+          type="number"
+          min="5"
+          max="100"
+          placeholder="age between 5 and 100 only"
+          required
+        />
+        <br />
+        <br />
+
+        <label for="password">Password: </label>
+        <br />
+        <input id="password" type="password" required />
+        <br />
+        <br />
+
+        <label for="password">Confirm Password: </label>
+        <br />
+        <input id="Password" type="Password" required />
+        <br />
+        <br />
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <footer id="contact" style="padding-top: 0%">
+      <p>
+        Designed By: Sandeep<br />
+        <a href="mailto:sandeepoffc10@gmail.com">sandeepoffc10@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
