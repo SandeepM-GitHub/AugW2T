@@ -1,109 +1,117 @@
 /* Styling of the whole body */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: bisque;
     background: linear-gradient(
-        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.4),
         rgba(255, 255, 255, 0.4)
       ), url('https://images.unsplash.com/photo-1568667256531-7d5ac92eaa7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGlicmFyeSUyMGJvb2tzfGVufDB8fDB8fHww&w=1000&q=80') no-repeat center center fixed;
     background-size: cover;
 }
 
 /* Styling of the Sticky-Navigation bar */
-#navBar{
+nav{
     background-color: rgb(0, 0, 0);
     color: white;
-    padding: 10px;
+    display: flex;
+    padding: 10px 30px;
     position: sticky;
+    justify-content: space-between;
     top: 0px;
-    border-radius: 4px;
+    z-index: 1;
 }
 
-#navBar>h1{
-    display: inline-block;
-    width: 1099px;
-}
-
-#navBar>a{
-    text-align: left;
+nav>a,nav>div>a{
     color: white;
     text-decoration: none;
+    margin-inline: 10px;
     transition: color 0.3s ease-in-out;
-    padding-inline: 20px;
 }
 
-#navBar>a:hover{
+nav>div>a:hover{
     color: rgb(88, 88, 244);
 }
 
 
 /* Styling of Tables-Rows-Columns */
-th, tr, td{
-    border: solid 1.6px black;
-    border-radius: 10px;
-    font-size: medium;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#books,#register{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
 }
 
-thead{
-    background-color: rgb(36, 34, 34);
-    color: #ddd;
+#books-div,#register-div{
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px darkgray;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: white;
 }
 
-#table-1{
+#books-heading,#register-div>h2{
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+table,td,th{
+    border: 2px solid #ececec;
     border-collapse: collapse;
-    width: 100%;
-    text-align: center;
+    color: #2c2c2c;
 }
 
-#table-2{
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
+td,th{
+    padding: 10px;
 }
 
-#books{
-    background-color: none;
-    display: grid;
-    place-items: center;
+td>a{
+    color: #220fbc;
+    display: inline-block;
+    padding-bottom: 10px;
 }
-
 
 /* Styling of Registration Form */
 form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#register-div{
+    width: 823.5px;
 }
 
 
-input, button {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 150%;
+input{
+    border: 1px solid #ececec;
+    border-radius: 5px;
 }
 
 button {
-    background-color: #333;
+    background-color: black;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 17px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 button:hover {
     background-color: rgb(88, 88, 244);
-}
-
-#register{
-    padding-left: 20%;
 }
 
 
@@ -111,7 +119,8 @@ button:hover {
 footer{
     background-color: rgb(0, 0, 0);
     color: white;
-    padding: 0px;
+    padding: 10px;
     text-align: center;
     border-radius: 4px;
+    margin-top: 20px;
 }
